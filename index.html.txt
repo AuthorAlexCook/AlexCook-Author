@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alex Cook | Author</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Lato', sans-serif; background: #f8f5f0; color: #333; line-height: 1.7; }
+  .hero { width: 100%; height: 60vh; min-height: 340px; background: url('hero.jpg') center/cover no-repeat; position: relative; }
+  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(26,42,58,0.4), rgba(26,42,58,0.75)); display: flex; align-items: center; justify-content: center; text-align: center; color: white; }
+  .hero-overlay h1 { font-family: 'Playfair Display', serif; font-size: 3.6rem; margin-bottom: 0.4rem; }
+  .hero-overlay p { font-size: 1.4rem; letter-spacing: 1px; }
+  nav { background: #1a2a3a; text-align: center; padding: 1rem; position: sticky; top: 0; z-index: 10; }
+  nav a { color: white; text-decoration: none; margin: 0 1.4rem; font-weight: 700; font-size: 1.05rem; }
+  nav a:hover { color: #e67e22; }
+  section { max-width: 1100px; margin: 0 auto; padding: 4.5rem 1.5rem; }
+  h2 { font-family: 'Playfair Display', serif; font-size: 2.6rem; text-align: center; margin-bottom: 2.2rem; color: #1a2a3a; }
+  .about { display: grid; grid-template-columns: 1fr 1.8fr; gap: 2.5rem; align-items: start; }
+  .about-images { display: flex; flex-direction: column; gap: 1.5rem; }
+  .about-images img { width: 100%; border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+  .about p { margin-bottom: 1.15rem; font-size: 1.05rem; }
+  .books { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+  .book { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s; }
+  .book:hover { transform: translateY(-8px); }
+  .book img { width: 100%; height: 370px; object-fit: cover; background: #eee; }
+  .book h3 { font-family: 'Playfair Display', serif; margin: 1.1rem 0 0.5rem; padding: 0 1rem; }
+  .book p { padding: 0 1rem 1rem; color: #555; font-size: 0.95rem; }
+  .btn { display: inline-block; background: #e67e22; color: white; padding: 0.75rem 1.6rem; text-decoration: none; border-radius: 6px; font-weight: 700; margin-bottom: 1.3rem; }
+  .btn:hover { background: #d35400; }
+  .coming { opacity: 0.8; }
+  footer { background: #1a2a3a; color: white; text-align: center; padding: 2.2rem; margin-top: 1rem; }
+  @media (max-width: 768px) {
+    .hero-overlay h1 { font-size: 2.5rem; }
+    .hero { height: 50vh; }
+    .about { grid-template-columns: 1fr; }
+    .about-images { flex-direction: row; flex-wrap: wrap; }
+    .about-images img { width: 48%; }
+  }
+</style>
+</head>
+<body>
+  <div class="hero">
+    <div class="hero-overlay">
+      <div>
+        <h1>Alex Cook</h1>
+        <p>Author</p>
+      </div>
+    </div>
+  </div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#books">Books</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About the Author</h2>
+    <div class="about">
+      <div class="about-images">
+        <img src="family.jpg" alt="Family">
+        <img src="author.jpg" alt="Alex Cook and Leslie">
+        <img src="surfing.jpg" alt="Surfing">
+      </div>
+      <div>
+        <p>Alexander M. Cook has spent a lifetime chasing excellence—on the mat, in the markets, and across the world’s wildest coastlines. A 1978 inductee into the Clearwater High School Athletic Hall of Fame and a 2001 inductee into the Pomona-Pitzer Athletic Hall of Fame for wrestling, he carried the same competitive fire from Florida classrooms to Pomona College (BA, Economics, 1982) and UCLA (MBA, 1985).</p>
+        <p>That drive took him through the trading floors of Salomon Brothers and into senior roles at Offit Hall Capital Management and Fortress, where he served as Managing Director and as CEO and Chief Investment Officer of the Fortress Partners Funds. Along the way, he helped shape investment strategies for institutions and high-net-worth clients while remaining rooted in the communities that shaped him. While living on Sanibel Island, he founded the Sanibel School Foundation, supporting local education and enrichment programs that continue to benefit island students.</p>
+        <p>Cook is the author of three books. When he is not writing or investing, he can often be found between the Columbia River Gorge, the coast of Baja, and the breaks of Indonesia, chasing wind and waves. He measures his greatest success not by deals closed or titles earned, but by the life he has built with his wife of 40 years, Leslie, their three children, and a steadily growing brood of grandchildren.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="books">
+    <h2>Books</h2>
+    <div class="books">
+      <div class="book">
+        <img src="https://via.placeholder.com/300x450/1a2a3a/ffffff?text=Donuts+Are+Meant+to+Be+Eaten" alt="Donuts Are Meant to Be Eaten">
+        <h3>Donuts Are Meant to Be Eaten</h3>
+        <p>On a sultry summer night in Florida in 1979, the three young Barton brothers set out for a night on the town that changes their lives forever. A raucous, poignant family drama. Profits donated to the Innocence Project.</p>
+        <a href="https://www.amazon.com/Donuts-Are-Meant-Be-Eaten/dp/1543979955" class="btn" target="_blank" rel="noopener">Buy on Amazon</a>
+      </div>
+      <div class="book">
+        <img src="https://via.placeholder.com/300x450/1a2a3a/ffffff?text=Only+the+Trying" alt="Only the Trying">
+        <h3>Only the Trying</h3>
+        <p>The continuing story of the Barton brothers. When Keno disappears on a surf trip in remote Baja, the family must confront secrets and the dark underbelly of privilege. Book 2.</p>
+        <a href="https://www.amazon.com/Only-Trying-Jagger-Singing-Satisfaction-ebook/dp/B07ZHNDYB9" class="btn" target="_blank" rel="noopener">Buy on Amazon</a>
+      </div>
+      <div class="book">
+        <img src="https://via.placeholder.com/300x450/1a2a3a/ffffff?text=Horatio+Peabody" alt="Horatio Peabody">
+        <h3>Horatio Peabody</h3>
+        <p>[Add a short description for Horatio Peabody here when ready.]</p>
+        <a href="https://www.amazon.com/Horatio-Peabody-Alex-Cook-ebook/dp/B0FL1HK2ZM" class="btn" target="_blank" rel="noopener">Buy on Amazon</a>
+      </div>
+      <div class="book coming">
+        <img src="https://via.placeholder.com/300x450/555/ffffff?text=Single+String+Ukulele" alt="Single String Ukulele">
+        <h3>Single String Ukulele</h3>
+        <p>In progress.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Connect</h2>
+    <p style="text-align:center; font-size:1.1rem;">Readers are welcome to reach out.<br>(Add your preferred email or social links here.)</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Alex Cook. All rights reserved.</p>
+  </footer>
+</body>
+</html>
