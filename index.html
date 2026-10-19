@@ -21,15 +21,15 @@
   .about-images { display: flex; flex-direction: column; gap: 1.5rem; }
   .about-images img { width: 100%; border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
   .about p { margin-bottom: 1.15rem; font-size: 1.05rem; }
-  .books { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
-  .book { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s; }
-  .book:hover { transform: translateY(-8px); }
-  .book img { width: 100%; height: 370px; object-fit: cover; background: #eee; }
-  .book h3 { font-family: 'Playfair Display', serif; margin: 1.1rem 0 0.5rem; padding: 0 1rem; }
-  .book p { padding: 0 1rem 1rem; color: #555; font-size: 0.95rem; }
-  .btn { display: inline-block; background: #e67e22; color: white; padding: 0.75rem 1.6rem; text-decoration: none; border-radius: 6px; font-weight: 700; margin-bottom: 1.3rem; }
-  .btn:hover { background: #d35400; }
-  .coming { opacity: 0.8; }
+  
+ .books { display: flex; flex-direction: column; gap: 3rem; max-width: 480px; margin: 0 auto; }
+.book { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.1); text-align: center; }
+.book img { width: 100%; height: auto; max-height: 520px; object-fit: contain; background: #f0f0f0; }
+.book h3 { font-family: 'Playfair Display', serif; margin: 1.2rem 1rem 0.6rem; color: #1a2a3a; }
+.book p { padding: 0 1.5rem 1rem; color: #444; font-size: 1rem; }
+.btn { display: inline-block; background: #e67e22; color: white; padding: 0.8rem 1.8rem; text-decoration: none; border-radius: 6px; font-weight: 700; margin-bottom: 1.5rem; }
+.btn:hover { background: #d35400; }
+.coming { opacity: 0.85; }
   footer { background: #1a2a3a; color: white; text-align: center; padding: 2.2rem; margin-top: 1rem; }
   @media (max-width: 768px) {
     .hero-overlay h1 { font-size: 2.5rem; }
@@ -38,7 +38,7 @@
     .about-images { flex-direction: row; flex-wrap: wrap; }
     .about-images img { width: 48%; }
   }
- .book h3, .book p { color: white; }
+ 
 </style>
 </head>
 <body>
@@ -75,17 +75,20 @@
   <section id="books">
   <h2>Books</h2>
   <div class="books">
-    <div class="book" style="background: linear-gradient(rgba(26,42,58,0.75), rgba(26,42,58,0.75)), url('donuts.jpg') center/cover no-repeat;">
+    <div class="book">
+      <img src="donuts.jpg" alt="Donuts Are Meant to Be Eaten cover">
       <h3>Donuts Are Meant to Be Eaten</h3>
       <p>On a sultry summer night in Florida in 1979, the three young Barton brothers set out for a night on the town that changes their lives forever. A raucous, poignant family drama. Profits donated to the Innocence Project.</p>
       <a href="https://www.amazon.com/Donuts-Are-Meant-Be-Eaten/dp/1543979955" class="btn" target="_blank" rel="noopener">Buy on Amazon</a>
     </div>
-    <div class="book" style="background: linear-gradient(rgba(26,42,58,0.75), rgba(26,42,58,0.75)), url('trying.jpg.jpg') center/cover no-repeat;">
+    <div class="book">
+      <img src="trying.jpg" alt="Only the Trying cover">
       <h3>Only the Trying</h3>
-      <p>The continuing story of the Barton brothers. When Keno disappears on a surf trip in remote Baja, the family must confront secrets and the dark underbelly of society. Book 2.</p>
+      <p>The continuing story of the Barton brothers. When Keno disappears on a surf trip in remote Baja, the family must confront secrets and the dark underbelly of abundance. Book 2.</p>
       <a href="https://www.amazon.com/Only-Trying-Jagger-Singing-Satisfaction-ebook/dp/B07ZHNDYB9" class="btn" target="_blank" rel="noopener">Buy on Amazon</a>
     </div>
-    <div class="book" style="background: linear-gradient(rgba(26,42,58,0.75), rgba(26,42,58,0.75)), url('horatio.jpg') center/cover no-repeat;">
+    <div class="book">
+      <img src="horatio.jpg" alt="Horatio Peabody cover">
       <h3>Horatio Peabody</h3>
       <p>[Add a short description for Horatio Peabody here when ready.]</p>
       <a href="https://www.amazon.com/Horatio-Peabody-Alex-Cook-ebook/dp/B0FL1HK2ZM" class="btn" target="_blank" rel="noopener">Buy on Amazon</a>
@@ -97,10 +100,6 @@
     </div>
   </div>
 </section>
-  <section id="contact">
-    <h2>Connect</h2>
-    <p style="text-align:center; font-size:1.1rem;">Readers are welcome to reach out.<br>(Add your preferred email or social links here.)</p>
-  </section>
 
   <footer>
     <p>&copy; 2026 Alex Cook. All rights reserved.</p>
